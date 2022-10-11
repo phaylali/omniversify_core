@@ -7,11 +7,9 @@ import 'package:unicons/unicons.dart';
 class HomePage extends GetResponsiveView<HomeController> {
   HomePage({super.key});
 
-  
-
   @override
   Widget build(BuildContext context) {
-    
+
     screen.context = context;
     final C = Colorz(context);
     final T = Textz(context);
