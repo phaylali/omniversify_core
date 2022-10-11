@@ -1,23 +1,31 @@
 name: omniversify_core
 description: A new Flutter project.
-version: 69.4.20
+version: 0.0.1
 homepage: https://omniversify.com
 repository: https://github.com/phaylali/omniversify_core
 
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
+
 environment:
-  sdk: '>=2.17.6 <3.0.0'
+  sdk: '>=2.19.0-298.0.dev <3.0.0'
   flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  url_strategy:
-  url_launcher:
-  get: 
-  get_storage:
-  flutter_svg:
-  intl:
-  google_fonts:
+  url_strategy: ^0.2.0
+  url_launcher: ^6.1.6
+  get: ^4.6.5
+  get_storage: ^2.0.3
+  flutter_svg: ^1.1.5
+  intl: ^0.17.0
+  google_fonts: ^3.0.1
   
 
 dev_dependencies:

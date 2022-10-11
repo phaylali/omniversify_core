@@ -74,7 +74,7 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
                     child: ListTile(
                       title: Text(
                         'terms'.tr,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         textDirection: TextDirection.rtl,
                       ),
                       leading: Icon(
@@ -93,7 +93,7 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
                     child: ListTile(
                       title: Text(
                         'privacy'.tr,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         textDirection: TextDirection.rtl,
                       ),
                       leading: Icon(
@@ -112,7 +112,7 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
                     child: ListTile(
                       title: Text(
                         'licenses'.tr,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         textDirection: TextDirection.rtl,
                       ),
                       leading: Icon(
@@ -131,7 +131,7 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
                     child: ListTile(
                       title: Text(
                         'next_language'.tr,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         textDirection: TextDirection.rtl,
                       ),
                       leading: Icon(

@@ -52,7 +52,7 @@ class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
               child: ListTile(
                 title: Text(
                   'go_back_home'.tr,
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center,
                   textDirection: TextDirection.rtl,
                 ),

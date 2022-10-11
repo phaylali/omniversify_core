@@ -71,7 +71,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
                       if (!fullscreen)
                         Text(title,
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headline3),
+                            style: Theme.of(context).textTheme.displaySmall),
                       child,
                       if (!fullscreen)
                         const SizedBox(

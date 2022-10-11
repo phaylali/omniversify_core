@@ -19,12 +19,12 @@ class Textz {
     this.context,
   );
   final BuildContext context;
-  TextStyle? get sub1 => Theme.of(context).textTheme.subtitle1;
-  TextStyle? get sub2 => Theme.of(context).textTheme.subtitle2;
-  TextStyle? get h1 => Theme.of(context).textTheme.headline1;
-  TextStyle? get h2 => Theme.of(context).textTheme.headline2;
-  TextStyle? get h3 => Theme.of(context).textTheme.headline3;
-  TextStyle? get h4 => Theme.of(context).textTheme.headline4;
-  TextStyle? get h5 => Theme.of(context).textTheme.headline5;
-  TextStyle? get h6 => Theme.of(context).textTheme.headline6;
+  TextStyle? get sub1 => Theme.of(context).textTheme.titleMedium;
+  TextStyle? get sub2 => Theme.of(context).textTheme.titleSmall;
+  TextStyle? get h1 => Theme.of(context).textTheme.displayLarge;
+  TextStyle? get h2 => Theme.of(context).textTheme.displayMedium;
+  TextStyle? get h3 => Theme.of(context).textTheme.displaySmall;
+  TextStyle? get h4 => Theme.of(context).textTheme.headlineMedium;
+  TextStyle? get h5 => Theme.of(context).textTheme.headlineSmall;
+  TextStyle? get h6 => Theme.of(context).textTheme.titleLarge;
 }
