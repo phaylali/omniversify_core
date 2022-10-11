@@ -1,5 +1,4 @@
 import 'home.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +15,6 @@ void main() async {
   initializeDateFormatting('en_UK');
   Get.put<OmniversalHomeController>(OmniversalHomeController());
   
-  LicenseRegistry.addLicense(() async* {
-    final license = await rootBundle.loadString('fonts/OFL.txt');
-    yield LicenseEntryWithLineBreaks(['fonts'], license);
-  });
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.black));
   await omniverseMain();
