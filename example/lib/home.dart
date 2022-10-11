@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:omniversify_core/omniversify_core.dart';
 import 'package:unicons/unicons.dart';
 class HomePage extends GetResponsiveView<HomeController> {
+  HomePage({super.key});
+
   
 
   @override
