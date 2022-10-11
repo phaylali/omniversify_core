@@ -1,0 +1,31 @@
+name: omniversify_core
+description: A new Flutter project.
+version: 69.4.20
+homepage:
+
+environment:
+  sdk: '>=2.17.6 <3.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_strategy:
+  url_launcher:
+  get: 
+  get_storage:
+  flutter_svg:
+  intl:
+  google_fonts:
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
