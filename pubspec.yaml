@@ -1,7 +1,8 @@
 name: omniversify_core
 description: A new Flutter project.
 version: 69.4.20
-homepage:
+homepage: https://omniversify.com
+repository: https://github.com/phaylali/omniversify_core
 
 environment:
   sdk: '>=2.17.6 <3.0.0'
