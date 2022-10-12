@@ -1,6 +1,6 @@
 # example
 
-A new Flutter project.
+Tis is an example of how to use the omniversify_core package
 
 ## Getting Started
 

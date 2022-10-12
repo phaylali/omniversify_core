@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// Navigation rail in case the app is in tablet or desktop mode
 class NavRail extends GetView<OmniversalHomeController> {
   const NavRail({
     Key? key,

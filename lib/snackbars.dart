@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// A custom snackbar widget for error
 GetSnackBar errorSnack(e) {
   final C = Colorz(Get.context!);
   final T = Textz(Get.context!);
@@ -20,6 +21,7 @@ GetSnackBar errorSnack(e) {
   );
 }
 
+/// A custom snackbar widget for success
 GetSnackBar successSnack(e) {
   final C = Colorz(Get.context!);
   final T = Textz(Get.context!);
@@ -40,6 +42,7 @@ GetSnackBar successSnack(e) {
   );
 }
 
+/// A custom snackbar widget for features that haven't been implemented yet
 GetSnackBar soonSnack() {
   final C = Colorz(Get.context!);
   final T = Textz(Get.context!);

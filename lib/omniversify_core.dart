@@ -25,14 +25,13 @@ part 'navrail.dart';
 part 'dialogs.dart';
 part 'snackbars.dart';
 
+/// This is the main app and the first thing you call to ensure theme and language persistence
 omniverseMain() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //if (GetPlatform.isAndroid) await MobileAds.instance.initialize();
   Get.put(OmniversalHomeController());
   setPathUrlStrategy();
   await initializeDateFormatting();
   await GetStorage.init();
-
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.black));
 }

@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// Ensures the use of Colors without context
 class Colorz {
   Colorz(
     this.context,
@@ -14,6 +15,7 @@ class Colorz {
   Color? get g => Theme.of(context).colorScheme.surface;
 }
 
+/// Ensures the use of TextStyles without context
 class Textz {
   Textz(
     this.context,

@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:omniversify_core/omniversify_core.dart';
 import 'package:unicons/unicons.dart';
+
 class HomePage extends GetResponsiveView<HomeController> {
   HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     screen.context = context;
     final C = Colorz(context);
     final T = Textz(context);
@@ -80,7 +80,6 @@ class HomePage extends GetResponsiveView<HomeController> {
 
                           controller.update();
                         })),
-                
               ],
             ),
             const SizedBox(

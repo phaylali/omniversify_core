@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// Hardcoded translations of some words that can be used and have been used in the Omniversify apps, feel free to submit other words for arabic translation, or if you can help adding another language by translating the english words there, that would be great.
 class OmniversalTranslations extends Translations {
   OmniversalTranslations(
       this.title, this.titleAR, this.welcome, this.welcomeAR);

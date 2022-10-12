@@ -1,9 +1,10 @@
 part of omniversify_core;
 
+/// The wrapper around every page in the omniversify_core package, by filling its pre-requisits you ensure to have a page that follow the design pattern with little to no errors
 class OmniversalSkeleton extends GetView<OmniversalHomeController> {
-  // ignore: use_key_in_widget_constructors
   const OmniversalSkeleton(
-      {required this.button,
+      {super.key,
+      required this.button,
       required this.child,
       required this.fab,
       required this.function,
@@ -60,9 +61,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
                   child: Align(
                 alignment: Alignment.topCenter,
                 child: SingleChildScrollView(
-                  //physics:  const BouncingScrollPhysics(),
                   child: Column(
-                    //shrinkWrap: false,
                     children: [
                       if (!fullscreen)
                         const SizedBox(

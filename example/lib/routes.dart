@@ -1,4 +1,3 @@
-
 import 'package:example/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -56,6 +55,5 @@ class AppPages {
       name: Paths.unknown,
       page: () => OmniversalError404(),
     ),
-    
   ];
 }

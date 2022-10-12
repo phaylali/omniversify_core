@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// Additional options for the NavBar and the NavRail
 class NavBarX extends GetView<OmniversalHomeController> {
   const NavBarX({
     Key? key,
@@ -145,7 +146,6 @@ class NavBarX extends GetView<OmniversalHomeController> {
             ? Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                //mainAxisSize: MainAxisSize.max,
                 children: children,
               )
             : Column(

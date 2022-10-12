@@ -1,7 +1,9 @@
 part of omniversify_core;
 
-// ignore: use_key_in_widget_constructors
+/// A standalone page that is an error page. add it to your routing system are shown in the example to handle your rounting errors
 class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
+  OmniversalError404({super.key});
+
   @override
   Widget build(BuildContext context) {
     return OmniversalSkeleton(

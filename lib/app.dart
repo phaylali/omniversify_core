@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// The Main widget that is used at the start of the any app
 class OmniversalMain extends StatelessWidget {
   OmniversalMain(
       {Key? key,

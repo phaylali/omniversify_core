@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// Navigation bar in case the app is in mobile mode
 class NavBar extends GetView<OmniversalHomeController> {
   const NavBar({
     Key? key,

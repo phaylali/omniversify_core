@@ -1,8 +1,9 @@
 part of omniversify_core;
 
+/// The unified settings page, use it in routing, contains a language switch (will be replaced by a list of language except french), licenses page, privacy page, and terms & conditions page, tat you can add in the rounting page
 class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
-  // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
   OmniversalSettings({
+    super.key,
     required this.terms,
     required this.license,
     required this.privacy,

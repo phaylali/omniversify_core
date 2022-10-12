@@ -1,5 +1,6 @@
 part of omniversify_core;
 
+/// The unified theme for the omniversify apps, more themes are  coming soon
 ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
       colorScheme: ThemeData.dark().colorScheme.copyWith(
           secondary: Colors.grey[900],
@@ -67,7 +68,6 @@ ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
       listTileTheme: const ListTileThemeData(),
       outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
-              //elevation: MaterialStateProperty.all(10),
               backgroundColor: MaterialStateColor.resolveWith(getDarkBlueColor),
               foregroundColor:
                   MaterialStateColor.resolveWith(getDarkBlueOverlayColor),
@@ -76,7 +76,6 @@ ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
                       borderRadius: BorderRadius.circular(30))))),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-              //elevation: MaterialStateProperty.all(10),
               backgroundColor: MaterialStateColor.resolveWith(getDarkBlueColor),
               foregroundColor:
                   MaterialStateColor.resolveWith(getDarkBlueOverlayColor),

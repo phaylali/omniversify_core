@@ -1,8 +1,6 @@
-
 part of omniversify_core;
 
-
-
+/// A getx controller to control the switching between pages and languages and themes
 class OmniversalHomeController extends GetxController {
   static OmniversalHomeController instance = Get.find();
 
@@ -12,19 +10,6 @@ class OmniversalHomeController extends GetxController {
 
   var ar = const Locale('ar', 'MA');
   var us = const Locale('en', 'US');
-  
-
-  
-/*
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }*/
 
   switchLang() {
     if (Get.locale == us) {

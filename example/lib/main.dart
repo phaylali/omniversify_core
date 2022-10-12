@@ -7,14 +7,13 @@ import 'routes.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
 
   initializeDateFormatting('en_UK');
   Get.put<OmniversalHomeController>(OmniversalHomeController());
-  
+
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.black));
   await omniverseMain();
