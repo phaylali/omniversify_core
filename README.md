@@ -11,34 +11,20 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The foundation for the Omniversify Project
 
-## Features
+## Projects
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+List of projects that rely on this package is coming soon
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+This could be used by anyone, we would only ask for you to mention our name.
 
-```dart
-const like = 'sample';
-```
+an example in the `/example` folder. 
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
-
-## Build An App With The Omniversal Infrastructure
+## Build An App With The Omniversify Infrastructure
 
 - delete main() method
 - main() method return OmniversalMain() including OmniverseMain()
