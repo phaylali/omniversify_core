@@ -1,6 +1,6 @@
 name: omniversify_core
-description: The Foundation of the the Omniversify Project, this package started as a way for the Omniversify design language to be shared across its apps, but as we went through the code, we discovered that it could be cleared a bit and used by everyone, so if you like the design pattern, the responsiveness, the seo friendly routing system, the custom widgets, feel free to use it & to submit your PR.I'm just a solo amateur dev for now, so if I took some time to reply or fix something, please don't hold it against me.
-version: 0.0.2
+description: The Foundation of the the Omniversify Project, this package started as a way for the Omniversify design language to be shared across its apps, but it could be used by everyone.
+version: 0.0.4
 homepage: https://omniversify.com
 repository: https://github.com/phaylali/omniversify_core
 

@@ -27,6 +27,4 @@
 .dart_tool/
 .packages
 build/
-example/pubspec.lock
-.flutter-plugins-dependencies
-.gitignore
+

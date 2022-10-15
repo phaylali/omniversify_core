@@ -83,6 +83,8 @@ ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))))),
     );
+
+/// Material state widgets color function for the DarkBlue theme
 Color getDarkBlueColor(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
@@ -95,6 +97,7 @@ Color getDarkBlueColor(Set<MaterialState> states) {
   return Colors.grey[800]!;
 }
 
+/// Material state widgets overlay color function for the DarkBlue theme
 Color getDarkBlueOverlayColor(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
@@ -107,6 +110,7 @@ Color getDarkBlueOverlayColor(Set<MaterialState> states) {
   return Colors.blue[100]!;
 }
 
+/// Material state text overlay color function for the DarkBlue theme
 TextStyle getDarkBlueOverlayTextStyle(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
@@ -119,6 +123,7 @@ TextStyle getDarkBlueOverlayTextStyle(Set<MaterialState> states) {
   return TextStyle(color: Colors.blue[100]!);
 }
 
+/// Material state icon overlay color function for the DarkBlue theme
 IconThemeData getDarkBlueOverlayIcon(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
