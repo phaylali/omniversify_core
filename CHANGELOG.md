@@ -1,3 +1,7 @@
+## 0.0.5
+
+* adding some translations and support for M3 material support
+
 ## 0.0.4
 
 * adding more documentation

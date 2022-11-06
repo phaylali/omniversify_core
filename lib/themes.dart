@@ -2,6 +2,7 @@ part of omniversify_core;
 
 /// The unified theme for the omniversify apps, more themes are  coming soon
 ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
+      useMaterial3: true,
       colorScheme: ThemeData.dark().colorScheme.copyWith(
           secondary: Colors.grey[900],
           background: Colors.black,

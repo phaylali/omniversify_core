@@ -142,7 +142,14 @@ class OmniversalTranslations extends Translations {
           'end_date': 'End Date',
           'previous_team': 'Previous Team',
           'new_team': 'New Team',
-          'success_login': 'Logged In Successfully'
+          'success_login': 'Logged In Successfully',
+          'fees': 'Fees',
+          'amo': 'AMO',
+          'taxehalle': 'Tax Halle',
+          'taxeregion': 'Tax Region',
+          'othercharges': 'Other Charges',
+          'teamperc': 'Team Percentage',
+          'peage': 'Péage'
         },
         //ARABIC LANGUAGE
         'ar_MA': {
@@ -276,7 +283,14 @@ class OmniversalTranslations extends Translations {
           'end_date': 'تاريخ النهاية',
           'previous_team': 'الفريق السالق',
           'new_team': 'الفريق الجديد',
-          'success_login': 'تم تسجيل الدخول بنجاح'
+          'success_login': 'تم تسجيل الدخول بنجاح',
+          'fees': 'رسوم بنكية',
+          'amo': 'التغطية الصحية',
+          'taxehalle': 'ضريبة السوق',
+          'taxeregion': 'ضريبة الجهة',
+          'othercharges': 'مصاريف اخرى',
+          'teamperc': 'نسبة الفريق',
+          'peage': 'رسوم'
         },
       };
 }
