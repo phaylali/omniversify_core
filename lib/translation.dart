@@ -10,7 +10,7 @@ class OmniversalTranslations extends Translations {
   final String welcomeAR;
   @override
   Map<String, Map<String, String>> get keys => {
-        //ENGLISH LANGUAGE
+        ///ENGLISH LANGUAGE
         'en_US': {
           'title': title,
           'welcome': welcome,
@@ -151,7 +151,8 @@ class OmniversalTranslations extends Translations {
           'teamperc': 'Team Percentage',
           'peage': 'Péage'
         },
-        //ARABIC LANGUAGE
+
+        ///ARABIC LANGUAGE
         'ar_MA': {
           'title': titleAR,
           'welcome': welcomeAR,
