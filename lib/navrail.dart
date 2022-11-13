@@ -2,18 +2,18 @@ part of omniversify_core;
 
 /// Navigation rail in case the app is in tablet or desktop mode
 class NavRail extends GetView<OmniversalHomeController> {
-  const NavRail({
-    Key? key,
-    required this.icon1,
-    required this.icon2,
-    required this.icon3,
-    required this.label1,
-    required this.label2,
-    required this.label3,
-    required this.route1,
-    required this.route2,
-    required this.route3,
-  }) : super(key: key);
+  const NavRail(
+      {super.key,
+      required this.icon1,
+      required this.icon2,
+      required this.icon3,
+      required this.label1,
+      required this.label2,
+      required this.label3,
+      required this.route1,
+      required this.route2,
+      required this.route3,
+      required this.desk});
   final IconData? icon1;
   final String? label1;
   final String? route1;
@@ -23,9 +23,11 @@ class NavRail extends GetView<OmniversalHomeController> {
   final IconData? icon3;
   final String? label3;
   final String? route3;
+  final bool? desk;
   @override
   Widget build(BuildContext context) {
     return NavigationRail(
+      extended: desk! ? true : false,
       onDestinationSelected: (pageindex) {
         controller.pageselected.value = pageindex;
 
@@ -106,6 +108,8 @@ class NavRail extends GetView<OmniversalHomeController> {
             label: Text(label3!),
           ),
       ],
+      labelType:
+          desk! ? NavigationRailLabelType.none : NavigationRailLabelType.all,
       selectedIndex: controller.pageselected.value,
     );
   }

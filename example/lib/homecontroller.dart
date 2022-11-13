@@ -1,3 +1,5 @@
+import 'package:example/home.dart';
+
 import 'routes.dart';
 import 'package:get/get.dart';
 
@@ -7,6 +9,7 @@ class HomeController extends GetxController {
   RxInt pageselected = 0.obs;
   RxString boats = '0'.obs;
   RxString sailors = '0'.obs;
+  Test testo = Test.one;
 
   setupRoute() {
     switch (Get.currentRoute) {

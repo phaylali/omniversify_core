@@ -39,20 +39,12 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
         backgroundColor: Theme.of(context).colorScheme.background,
         floatingActionButton: fabenabled
             ? FloatingActionButton(
-                backgroundColor: Theme.of(context).colorScheme.secondary,
-                tooltip: fab,
-                child: button,
-                onPressed: () => function!())
+                tooltip: fab, child: button, onPressed: () => function!())
             : null,
         body: SafeArea(
           child: Row(
             children: [
-              navrail != null
-                  ? SizedBox(
-                      width: 80,
-                      child: navrail,
-                    )
-                  : Container(),
+              navrail ?? Container(),
               if (!fullscreen)
                 const SizedBox(
                   width: 20,
@@ -80,12 +72,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
                   ),
                 ),
               )),
-              navrailx != null
-                  ? SizedBox(
-                      width: 80,
-                      child: navrailx,
-                    )
-                  : Container(),
+              navrailx ?? Container(),
               if (!fullscreen)
                 const SizedBox(
                   width: 20,
@@ -93,11 +80,6 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
             ],
           ),
         ),
-        bottomNavigationBar: navbar != null
-            ? SizedBox(
-                height: 80,
-                child: navbar,
-              )
-            : null);
+        bottomNavigationBar: navbar);
   }
 }

@@ -12,7 +12,7 @@ class Colorz {
   Color? get t => Theme.of(context).colorScheme.tertiary;
   Color? get b => Theme.of(context).colorScheme.background;
   Color? get ts => Colors.transparent;
-  Color? get g => Theme.of(context).colorScheme.surface;
+  Color? get g => Theme.of(context).colorScheme.onSurface;
 }
 
 /// Ensures the use of TextStyles without context

@@ -1,3 +1,5 @@
+import 'package:example/homecontroller.dart';
+
 import 'home.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -13,7 +15,7 @@ void main() async {
 
   initializeDateFormatting('en_UK');
   Get.put<OmniversalHomeController>(OmniversalHomeController());
-
+  Get.put<HomeController>(HomeController());
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.black));
   await omniverseMain();
@@ -22,6 +24,7 @@ void main() async {
 
 class Start extends GetView<OmniversalHomeController> {
   const Start({super.key});
+
   @override
   Widget build(BuildContext context) {
     return OmniversalMain(

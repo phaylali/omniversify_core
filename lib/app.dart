@@ -24,8 +24,8 @@ class OmniversalMain extends StatelessWidget {
         initialRoute: '/',
         getPages: routes,
         unknownRoute: routes[2],
-        theme: omniversalDarkBlueTheme(),
-        darkTheme: omniversalDarkBlueTheme(),
+        theme: gamerTheme(),
+        darkTheme: gamerTheme(),
         translations:
             OmniversalTranslations(title, titleAR, welcome, welcomeAR),
         fallbackLocale: const Locale('en', 'US'),

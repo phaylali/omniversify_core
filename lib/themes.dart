@@ -1,20 +1,26 @@
 part of omniversify_core;
 
 /// The unified theme for the omniversify apps, more themes are  coming soon
-ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
+ThemeData gamerTheme() => ThemeData.dark().copyWith(
       useMaterial3: true,
       colorScheme: ThemeData.dark().colorScheme.copyWith(
-          secondary: Colors.grey[900],
-          background: Colors.black,
-          primary: Colors.grey[100],
-          tertiary: Colors.lightBlue,
-          brightness: Brightness.dark,
-          surface: Colors.green[900],
-          onError: Colors.red[900]),
+            secondary: Colors.grey[900],
+            background: Colors.black,
+            primary: Colors.grey[100],
+            tertiary: Colors.red[900],
+            brightness: Brightness.dark,
+            surface: Colors.red[900]!.withAlpha(40),
+            onError: Colors.red[900],
+            onSurface: Colors.green[900],
+          ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       focusColor: Colors.blue[400],
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.grey[700],
+          backgroundColor: Colors.red[900]!.withAlpha(40),
+          foregroundColor: Colors.red[900]!,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: BorderSide(color: Colors.red[900]!)),
           extendedTextStyle:
               TextStyle(inherit: false, color: Colors.grey[100], fontSize: 14)),
       dialogBackgroundColor: Colors.grey[900],
@@ -36,9 +42,13 @@ ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
           labelMedium: TextStyle(color: Colors.grey[100]),
           labelSmall: TextStyle(color: Colors.grey[100]))),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: Colors.grey[900],
-        indicatorColor: Colors.grey[100],
-        iconTheme: MaterialStateProperty.resolveWith(getDarkBlueOverlayIcon),
+        backgroundColor: Colors.red[900]!.withAlpha(40),
+        indicatorColor: Colors.red[900]!.withAlpha(40),
+        surfaceTintColor: Colors.black,
+        indicatorShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+            side: BorderSide(color: Colors.red[900]!)),
+        iconTheme: MaterialStateProperty.resolveWith(getOverlayIcon),
         labelTextStyle: MaterialStateProperty.all(
           GoogleFonts.tajawal(
               fontSize: 16,
@@ -47,6 +57,9 @@ ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
               color: Colors.grey[100]),
         ),
       ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.red[900]!.withAlpha(40),
+          landscapeLayout: BottomNavigationBarLandscapeLayout.centered),
       navigationRailTheme: NavigationRailThemeData(
         selectedLabelTextStyle: GoogleFonts.tajawal(
             fontSize: 16,
@@ -59,73 +72,75 @@ ThemeData omniversalDarkBlueTheme() => ThemeData.dark().copyWith(
             fontWeight: FontWeight.w600,
             color: Colors.grey[100]),
         useIndicator: true,
-        backgroundColor: Colors.grey[800],
-        indicatorColor: Colors.grey[100],
-        labelType: NavigationRailLabelType.all,
-        selectedIconTheme: IconThemeData(color: Colors.grey[800]),
+        minWidth: 80,
+        minExtendedWidth: 200,
+        backgroundColor: Colors.red[900]!.withAlpha(40),
+        indicatorColor: Colors.red[900]!.withAlpha(80),
+        selectedIconTheme: IconThemeData(color: Colors.grey[100]),
         unselectedIconTheme: IconThemeData(color: Colors.grey[100]),
       ),
       drawerTheme: DrawerThemeData(backgroundColor: Colors.grey[800]),
       listTileTheme: const ListTileThemeData(),
+      radioTheme: RadioThemeData(
+          fillColor: MaterialStateColor.resolveWith(getOverlayColor)),
       outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
-              backgroundColor: MaterialStateColor.resolveWith(getDarkBlueColor),
-              foregroundColor:
-                  MaterialStateColor.resolveWith(getDarkBlueOverlayColor),
+              backgroundColor: MaterialStateColor.resolveWith(getColor),
+              foregroundColor: MaterialStateColor.resolveWith(getOverlayColor),
+              side: MaterialStateBorderSide.resolveWith(getBorderIcon),
               shape: MaterialStateProperty.all<OutlinedBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))))),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-              backgroundColor: MaterialStateColor.resolveWith(getDarkBlueColor),
-              foregroundColor:
-                  MaterialStateColor.resolveWith(getDarkBlueOverlayColor),
+              backgroundColor: MaterialStateColor.resolveWith(getColor),
+              foregroundColor: MaterialStateColor.resolveWith(getOverlayColor),
               shape: MaterialStateProperty.all<OutlinedBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))))),
     );
 
 /// Material state widgets color function for the DarkBlue theme
-Color getDarkBlueColor(Set<MaterialState> states) {
+Color getColor(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
     MaterialState.hovered,
     MaterialState.focused,
   };
   if (states.any(interactiveStates.contains)) {
-    return Colors.grey[700]!;
+    return Colors.red[900]!;
   }
-  return Colors.grey[800]!;
+  return Colors.red[900]!.withAlpha(40);
 }
 
 /// Material state widgets overlay color function for the DarkBlue theme
-Color getDarkBlueOverlayColor(Set<MaterialState> states) {
+Color getOverlayColor(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
     MaterialState.hovered,
     MaterialState.focused,
   };
   if (states.any(interactiveStates.contains)) {
-    return Colors.blue[100]!;
+    return Colors.red[900]!;
   }
-  return Colors.blue[100]!;
+  return Colors.red[900]!;
 }
 
 /// Material state text overlay color function for the DarkBlue theme
-TextStyle getDarkBlueOverlayTextStyle(Set<MaterialState> states) {
+TextStyle getOverlayTextStyle(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
     MaterialState.hovered,
     MaterialState.focused,
   };
   if (states.any(interactiveStates.contains)) {
-    return TextStyle(color: Colors.blue[100]!);
+    return TextStyle(color: Colors.grey[100]!);
   }
-  return TextStyle(color: Colors.blue[100]!);
+  return TextStyle(color: Colors.grey[100]!);
 }
 
 /// Material state icon overlay color function for the DarkBlue theme
-IconThemeData getDarkBlueOverlayIcon(Set<MaterialState> states) {
+IconThemeData getOverlayIcon(Set<MaterialState> states) {
   const Set<MaterialState> interactiveStates = <MaterialState>{
     MaterialState.pressed,
     MaterialState.hovered,
@@ -133,7 +148,20 @@ IconThemeData getDarkBlueOverlayIcon(Set<MaterialState> states) {
     MaterialState.selected,
   };
   if (states.any(interactiveStates.contains)) {
-    return IconThemeData(color: Colors.grey[800]!);
+    return IconThemeData(color: Colors.grey[100]!);
   }
   return IconThemeData(color: Colors.grey[100]!);
+}
+
+BorderSide getBorderIcon(Set<MaterialState> states) {
+  const Set<MaterialState> interactiveStates = <MaterialState>{
+    MaterialState.pressed,
+    MaterialState.hovered,
+    MaterialState.focused,
+    MaterialState.selected,
+  };
+  if (states.any(interactiveStates.contains)) {
+    return BorderSide(color: Colors.red[800]!);
+  }
+  return BorderSide(color: Colors.red[900]!);
 }

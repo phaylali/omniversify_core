@@ -14,7 +14,7 @@ class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
       },
       navrail: screen.isPhone
           ? null
-          : const NavRail(
+          : NavRail(
               icon1: null,
               icon2: null,
               icon3: null,
@@ -24,6 +24,7 @@ class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
               route1: null,
               route2: null,
               route3: null,
+              desk: screen.isDesktop ? true : false,
             ),
       navbar: screen.isPhone
           ? const NavBar(

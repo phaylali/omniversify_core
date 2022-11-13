@@ -15,7 +15,7 @@ GetSnackBar errorSnack(e) {
     backgroundColor: C.e!.withOpacity(0.5),
     borderRadius: 40,
     margin: const EdgeInsets.all(20),
-    duration: const Duration(seconds: 5),
+    duration: const Duration(seconds: 3),
     barBlur: 10,
     snackPosition: SnackPosition.TOP,
   );
@@ -36,7 +36,7 @@ GetSnackBar successSnack(e) {
     backgroundColor: C.g!.withOpacity(0.5),
     borderRadius: 40,
     margin: const EdgeInsets.all(20),
-    duration: const Duration(seconds: 5),
+    duration: const Duration(seconds: 3),
     barBlur: 10,
     snackPosition: SnackPosition.TOP,
   );
@@ -57,7 +57,7 @@ GetSnackBar soonSnack() {
     borderColor: C.t,
     borderRadius: 40,
     margin: const EdgeInsets.all(20),
-    duration: const Duration(seconds: 5),
+    duration: const Duration(seconds: 3),
     barBlur: 10,
     snackPosition: SnackPosition.TOP,
   );

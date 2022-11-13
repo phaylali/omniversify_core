@@ -20,9 +20,9 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
     return OmniversalSkeleton(
       fullscreen: false,
       navrailx: null,
-      navrail: screen.isPhone
+      navrail: screen.isPhone || screen.isWatch
           ? null
-          : const NavRail(
+          : NavRail(
               icon1: null,
               icon2: null,
               icon3: null,
@@ -32,8 +32,9 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
               route1: null,
               route2: null,
               route3: null,
+              desk: screen.isDesktop ? true : false,
             ),
-      navbar: screen.isPhone
+      navbar: screen.isPhone || screen.isWatch
           ? const NavBar(
               icon1: null,
               icon2: null,

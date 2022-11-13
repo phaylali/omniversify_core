@@ -1,3 +1,7 @@
+## 0.0.6
+
+* changing the theme to a gamer theme with many ui improvements
+
 ## 0.0.5
 
 * adding some translations and support for M3 material support
