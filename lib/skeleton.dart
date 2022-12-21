@@ -11,7 +11,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
       required this.title,
       required this.navrail,
       required this.navbar,
-      required this.navrailx,
+      //this.navrailx,
       required this.fabenabled,
       required this.fullscreen});
   final String title;
@@ -21,7 +21,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
   final Widget? button;
   final NavRail? navrail;
   final NavBar? navbar;
-  final Widget? navrailx;
+  //final Widget? navrailx;
   final bool fabenabled;
   final bool fullscreen;
 
@@ -44,7 +44,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
         body: SafeArea(
           child: Row(
             children: [
-              navrail ?? Container(),
+              navrail!,
               if (!fullscreen)
                 const SizedBox(
                   width: 20,
@@ -72,7 +72,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
                   ),
                 ),
               )),
-              navrailx ?? Container(),
+              //navrailx ?? Container(),
               if (!fullscreen)
                 const SizedBox(
                   width: 20,
@@ -80,6 +80,7 @@ class OmniversalSkeleton extends GetView<OmniversalHomeController> {
             ],
           ),
         ),
-        bottomNavigationBar: navbar);
+        //mockil hna, mli kan7ayd navbar kaykhdm , navbar kaym7i kolchi f desktop view
+        bottomNavigationBar: navbar!);
   }
 }

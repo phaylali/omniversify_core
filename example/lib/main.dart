@@ -33,7 +33,7 @@ class Start extends GetView<OmniversalHomeController> {
       welcome: 'Welcome',
       welcomeAR: 'مرحبا',
       routes: AppPages.routes,
-      homepage: HomePage(),
+      homepage: const HomePage(),
     );
   }
 }

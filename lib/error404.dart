@@ -8,37 +8,12 @@ class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
   Widget build(BuildContext context) {
     return OmniversalSkeleton(
       fullscreen: false,
-      navrailx: null,
+      //navrailx: null,
       function: () {
         Get.toNamed("/");
       },
-      navrail: screen.isPhone
-          ? null
-          : NavRail(
-              icon1: null,
-              icon2: null,
-              icon3: null,
-              label1: null,
-              label2: null,
-              label3: null,
-              route1: null,
-              route2: null,
-              route3: null,
-              desk: screen.isDesktop ? true : false,
-            ),
-      navbar: screen.isPhone
-          ? const NavBar(
-              icon1: null,
-              icon2: null,
-              icon3: null,
-              label1: null,
-              label2: null,
-              label3: null,
-              route1: null,
-              route2: null,
-              route3: null,
-            )
-          : null,
+      navrail: NavRail(),
+      navbar: NavBar(),
       fab: 'home'.tr,
       title: 'error404'.tr,
       button: Icon(

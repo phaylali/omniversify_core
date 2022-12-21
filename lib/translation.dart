@@ -149,7 +149,8 @@ class OmniversalTranslations extends Translations {
           'taxeregion': 'Tax Region',
           'othercharges': 'Other Charges',
           'teamperc': 'Team Percentage',
-          'peage': 'Péage'
+          'peage': 'Péage',
+          'all': 'All'
         },
 
         ///ARABIC LANGUAGE
@@ -291,7 +292,8 @@ class OmniversalTranslations extends Translations {
           'taxeregion': 'ضريبة الجهة',
           'othercharges': 'مصاريف اخرى',
           'teamperc': 'نسبة الفريق',
-          'peage': 'رسوم'
+          'peage': 'رسوم',
+          'all': 'الكل',
         },
       };
 }

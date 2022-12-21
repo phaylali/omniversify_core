@@ -19,34 +19,9 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
     screen.context = context;
     return OmniversalSkeleton(
       fullscreen: false,
-      navrailx: null,
-      navrail: screen.isPhone || screen.isWatch
-          ? null
-          : NavRail(
-              icon1: null,
-              icon2: null,
-              icon3: null,
-              label1: null,
-              label2: null,
-              label3: null,
-              route1: null,
-              route2: null,
-              route3: null,
-              desk: screen.isDesktop ? true : false,
-            ),
-      navbar: screen.isPhone || screen.isWatch
-          ? const NavBar(
-              icon1: null,
-              icon2: null,
-              icon3: null,
-              label1: null,
-              label2: null,
-              label3: null,
-              route1: null,
-              route2: null,
-              route3: null,
-            )
-          : null,
+      //navrailx: null,
+      navrail: NavRail(),
+      navbar: NavBar(),
       function: () {
         Get.showSnackbar(soonSnack());
       },

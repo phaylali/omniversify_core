@@ -6,44 +6,17 @@ import 'package:unicons/unicons.dart';
 
 enum Test { one, two }
 
-class HomePage extends GetResponsiveView<HomeController> {
-  HomePage({super.key});
+class HomePage extends GetView<HomeController> {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    screen.context = context;
     final C = Colorz(context);
     final T = Textz(context);
 
     return OmniversalSkeleton(
-        navrailx: null,
-        navrail: screen.isPhone || screen.isWatch
-            ? null
-            : NavRail(
-                icon1: null,
-                icon2: null,
-                icon3: null,
-                label1: null,
-                label2: null,
-                label3: null,
-                route1: null,
-                route2: null,
-                route3: null,
-                desk: screen.isDesktop ? true : false,
-              ),
-        navbar: screen.isPhone || screen.isWatch
-            ? const NavBar(
-                icon1: null,
-                icon2: null,
-                icon3: null,
-                label1: null,
-                label2: null,
-                label3: null,
-                route1: null,
-                route2: null,
-                route3: null,
-              )
-            : null,
+        navrail: NavRail(),
+        navbar: NavBar(),
         button: Icon(
           UniconsLine.refresh,
           color: C.p,
