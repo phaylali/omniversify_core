@@ -13,7 +13,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
 
-  initializeDateFormatting('en_UK');
+  initializeDateFormatting('en_GB');
   Get.put<OmniversalHomeController>(OmniversalHomeController());
   Get.put<HomeController>(HomeController());
   SystemChrome.setSystemUIOverlayStyle(

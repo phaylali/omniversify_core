@@ -1,3 +1,7 @@
+## 0.0.7
+
+* fixed some ui elements and unecessary boilerplate for a cleaner code
+
 ## 0.0.6
 
 * changing the theme to a gamer theme with many ui improvements
