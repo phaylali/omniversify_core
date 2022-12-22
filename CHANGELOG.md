@@ -1,3 +1,7 @@
+## 0.0.8
+
+* fixed dependencies
+
 ## 0.0.7
 
 * fixed some ui elements and unecessary boilerplate for a cleaner code
