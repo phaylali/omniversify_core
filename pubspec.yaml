@@ -2,7 +2,7 @@ name: omniversify_core
 description: The Foundation of the the Omniversify Project, this package started
   as a way for the Omniversify design language to be shared across its apps, but
   it could be used by everyone.
-version: 0.0.8
+version: 0.0.9
 homepage: https://omniversify.com
 repository: https://github.com/phaylali/omniversify_core
 
@@ -15,23 +15,26 @@ platforms:
   windows:
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
-  flutter: ">=3.0.0"
+  sdk: '>=3.0.0-257.0.dev <4.0.0'
+  flutter: ">=3.7.5"
 
 dependencies:
   flutter:
     sdk: flutter
   url_strategy: ^0.2.0
-  url_launcher: ^6.1.7
+  url_launcher: ^6.1.10
+  shared_preferences: ^2.0.18
+  flutter_svg: ^2.0.2
   get: ^4.6.5
   get_storage: ^2.0.3
-  flutter_svg: ^1.1.6
-  intl: ^0.17.0
-  google_fonts: ^3.0.1
-  
+  intl: ^0.18.0
+  google_fonts: ^4.0.3
+  flex_color_scheme: ^7.0.0-dev.2
+  go_router: ^6.2.0
+  flutter_riverpod: ^2.2.0
   
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
 

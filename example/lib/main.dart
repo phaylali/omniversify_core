@@ -1,39 +1,46 @@
-import 'package:example/homecontroller.dart';
-
-import 'home.dart';
+import 'package:app/controllers/language.dart';
+import 'package:app/controllers/theme.dart';
+import 'package:app/l10n/language.dart';
+import 'package:app/routing/routes.dart';
+import 'package:app/tools/themes.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:omniversify_core/omniversify_core.dart';
-import 'routes.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:intl/date_symbol_data_local.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await GetStorage.init();
-
-  initializeDateFormatting('en_GB');
-  Get.put<OmniversalHomeController>(OmniversalHomeController());
-  Get.put<HomeController>(HomeController());
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.black));
-  await omniverseMain();
-  runApp(const Start());
+  runApp(const ProviderScope(child: Start()));
 }
 
-class Start extends GetView<OmniversalHomeController> {
+class Start extends ConsumerWidget {
   const Start({super.key});
-
   @override
-  Widget build(BuildContext context) {
-    return OmniversalMain(
-      title: 'Test App',
-      titleAR: 'تجربة',
-      welcome: 'Welcome',
-      welcomeAR: 'مرحبا',
-      routes: AppPages.routes,
-      homepage: const HomePage(),
+  Widget build(BuildContext context, ref) {
+    final routerz = ref.watch(goRouterProvider);
+    final darkMode = ref.watch(darkModeProvider);
+    final lang = ref.watch(langProvider);
+    return MaterialApp.router(
+      scrollBehavior: const MaterialScrollBehavior(),
+      theme: flexLight(),
+      darkTheme: flexDark(),
+      locale: lang.locale,
+      supportedLocales: Language.locales().toList(),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,
+      title: "Title",
+      routeInformationParser: routerz.routeInformationParser,
+      routeInformationProvider: routerz.routeInformationProvider,
+      routerDelegate: routerz.routerDelegate,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

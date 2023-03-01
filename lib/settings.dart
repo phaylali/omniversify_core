@@ -18,20 +18,18 @@ class OmniversalSettings extends GetResponsiveView<OmniversalHomeController> {
   Widget build(BuildContext context) {
     screen.context = context;
     return OmniversalSkeleton(
-      fullscreen: false,
       //navrailx: null,
       navrail: NavRail(),
       navbar: NavBar(),
       function: () {
-        Get.showSnackbar(soonSnack());
+        Get.changeThemeMode(Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
       },
       fab: 'theme'.tr,
       title: 'settings'.tr,
-      button: Icon(
+      button: const Icon(
         Icons.mode_night,
-        color: Theme.of(context).colorScheme.primary,
       ),
-      fabenabled: true,
+
       child: Column(
         children: [
           const SizedBox(

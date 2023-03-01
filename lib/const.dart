@@ -1,7 +1,7 @@
 part of omniversify_core;
 
 /// Ensures the use of Colors without context
-class Colorz {
+/*class Colorz {
   Colorz(
     this.context,
   );
@@ -13,7 +13,7 @@ class Colorz {
   Color? get b => Theme.of(context).colorScheme.background;
   Color? get ts => Colors.transparent;
   Color? get g => Theme.of(context).colorScheme.onSurface;
-}
+}*/
 
 /// Ensures the use of TextStyles without context
 class Textz {

@@ -30,7 +30,7 @@ class NavRail extends GetResponsiveView<OmniversalHomeController> {
       return const SizedBox();
     } else {
       return NavigationRail(
-        extended: screen.isDesktop ? true : false,
+        backgroundColor: Colors.transparent,
         onDestinationSelected: (pageindex) {
           controller.pageselected.value = pageindex;
 
@@ -40,7 +40,7 @@ class NavRail extends GetResponsiveView<OmniversalHomeController> {
               controller.update();
               break;
             case 1:
-              Get.toNamed('/Settings');
+              Get.toNamed('/settings');
               controller.update();
               break;
             case 2:
@@ -112,9 +112,7 @@ class NavRail extends GetResponsiveView<OmniversalHomeController> {
               label: Text(label3!),
             ),
         ],
-        labelType: screen.isDesktop
-            ? NavigationRailLabelType.none
-            : NavigationRailLabelType.all,
+        labelType: NavigationRailLabelType.all,
       );
     }
   }

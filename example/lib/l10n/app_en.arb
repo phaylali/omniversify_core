@@ -1,0 +1,19 @@
+{
+  "@@locale": "en",
+  "appName": "Title",
+  "home": "Home",
+  "@home": {},
+  "profile": "Profile",
+  "@profile": {},
+  "discovery": "Discovery",
+  "@discovery": {},
+  "settings": "Settings",
+  "@settings": {},
+  "welcome": "Welcome {firstName}",
+  "@welcome": {
+    "description": "Welcome message on the Home screen",
+    "placeholders": {
+      "firstName": {}
+    }
+  }
+}

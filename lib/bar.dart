@@ -10,7 +10,7 @@ class OmniversalNavigation extends NavigationBar {
   final Function button4;
   final Function(int) navBehavior;
 
-  const OmniversalNavigation(this.destinationz, this.controller, this.button1,
+  OmniversalNavigation(this.destinationz, this.controller, this.button1,
       this.button2, this.button3, this.button4, this.navBehavior,
       {Key? key})
       : super(

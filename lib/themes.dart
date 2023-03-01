@@ -1,6 +1,56 @@
 part of omniversify_core;
 
 /// The unified theme for the omniversify apps, more themes are  coming soon
+
+ThemeData flexLight() => FlexThemeData.light(
+      //scheme: FlexScheme.red,
+      surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+      blendLevel: 20,
+      fontFamily: "Tajawal",
+      tabBarStyle: null,
+      useMaterial3ErrorColors: true,
+      subThemesData: const FlexSubThemesData(
+          useM2StyleDividerInM3: true,
+          fabUseShape: true,
+          navigationBarLabelTextStyle:
+              TextStyle(fontSize: 15, fontFamily: "Tajawal"),
+          navigationRailLabelTextStyle:
+              TextStyle(fontSize: 15, fontFamily: "Tajawal"),
+          navigationRailLabelType: NavigationRailLabelType.all,
+          navigationBarHeight: 80),
+
+      colorScheme: flexSchemeLight,
+      //keyColors: const FlexKeyColors(),
+      visualDensity: FlexColorScheme.comfortablePlatformDensity,
+      useMaterial3: true,
+      // To use the playground font, add GoogleFonts package and uncomment
+      // fontFamily: GoogleFonts.notoSans().fontFamily,
+    );
+
+ThemeData flexDark() => FlexThemeData.dark(
+      //scheme: FlexScheme.red,
+      surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+      fontFamily: "Tajawal",
+      blendLevel: 8,
+      tabBarStyle: null,
+      darkIsTrueBlack: true,
+
+      subThemesData: const FlexSubThemesData(
+          useM2StyleDividerInM3: true,
+          fabUseShape: true,
+          navigationBarLabelTextStyle: TextStyle(fontSize: 15),
+          navigationBarOpacity: 0,
+          navigationRailLabelTextStyle: TextStyle(fontSize: 15),
+          navigationRailLabelType: NavigationRailLabelType.all,
+          navigationBarHeight: 80),
+
+      colorScheme: flexSchemeDark,
+      //keyColors: const FlexKeyColors(),
+      visualDensity: FlexColorScheme.comfortablePlatformDensity,
+      useMaterial3: true,
+      // To use the Playground font, add GoogleFonts package and uncomment
+      //fontFamily: GoogleFonts.notoSans().fontFamily,
+    );
 ThemeData gamerTheme() => ThemeData.dark().copyWith(
       useMaterial3: true,
       colorScheme: ThemeData.dark().colorScheme.copyWith(
@@ -15,6 +65,7 @@ ThemeData gamerTheme() => ThemeData.dark().copyWith(
           ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       focusColor: Colors.blue[400],
+      iconTheme: IconThemeData(color: Colors.red[900]!.withAlpha(100)),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: Colors.red[900]!.withAlpha(40),
           foregroundColor: Colors.red[900]!,
@@ -42,25 +93,17 @@ ThemeData gamerTheme() => ThemeData.dark().copyWith(
           labelMedium: TextStyle(color: Colors.grey[100]),
           labelSmall: TextStyle(color: Colors.grey[100]))),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: Colors.red[900]!.withAlpha(40),
-        indicatorColor: Colors.red[900]!.withAlpha(40),
-        surfaceTintColor: Colors.black,
+          indicatorShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+              side: BorderSide(color: Colors.red[900]!)),
+          indicatorColor: Colors.red[900]!.withAlpha(80),
+          backgroundColor: Colors.red[900]!.withAlpha(40),
+          labelTextStyle:
+              MaterialStateTextStyle.resolveWith(getOverlayTextStyle)),
+      navigationRailTheme: NavigationRailThemeData(
         indicatorShape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
             side: BorderSide(color: Colors.red[900]!)),
-        iconTheme: MaterialStateProperty.resolveWith(getOverlayIcon),
-        labelTextStyle: MaterialStateProperty.all(
-          GoogleFonts.tajawal(
-              fontSize: 16,
-              height: 1.5,
-              fontWeight: FontWeight.w600,
-              color: Colors.grey[100]),
-        ),
-      ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.red[900]!.withAlpha(40),
-          landscapeLayout: BottomNavigationBarLandscapeLayout.centered),
-      navigationRailTheme: NavigationRailThemeData(
         selectedLabelTextStyle: GoogleFonts.tajawal(
             fontSize: 16,
             height: 2,
@@ -76,11 +119,11 @@ ThemeData gamerTheme() => ThemeData.dark().copyWith(
         minExtendedWidth: 200,
         backgroundColor: Colors.red[900]!.withAlpha(40),
         indicatorColor: Colors.red[900]!.withAlpha(80),
-        selectedIconTheme: IconThemeData(color: Colors.grey[100]),
-        unselectedIconTheme: IconThemeData(color: Colors.grey[100]),
+        selectedIconTheme: IconThemeData(color: Colors.blue[900]),
+        unselectedIconTheme: IconThemeData(color: Colors.blue[900]),
       ),
       drawerTheme: DrawerThemeData(backgroundColor: Colors.grey[800]),
-      listTileTheme: const ListTileThemeData(),
+      listTileTheme: const ListTileThemeData(tileColor: Colors.transparent),
       radioTheme: RadioThemeData(
           fillColor: MaterialStateColor.resolveWith(getOverlayColor)),
       outlinedButtonTheme: OutlinedButtonThemeData(
@@ -108,7 +151,7 @@ Color getColor(Set<MaterialState> states) {
     MaterialState.focused,
   };
   if (states.any(interactiveStates.contains)) {
-    return Colors.red[900]!;
+    return Colors.red[900]!.withAlpha(100);
   }
   return Colors.red[900]!.withAlpha(40);
 }
@@ -165,3 +208,74 @@ BorderSide getBorderIcon(Set<MaterialState> states) {
   }
   return BorderSide(color: Colors.red[900]!);
 }
+
+const ColorScheme flexSchemeDark = ColorScheme(
+  brightness: Brightness.dark,
+  primary: Color(0xffffb4ac),
+  onPrimary: Color(0xff690007),
+  primaryContainer: Color(0xff93000e),
+  onPrimaryContainer: Color(0xffffdad6),
+  secondary: Color(0xffe7bdb8),
+  onSecondary: Color(0xff442927),
+  secondaryContainer: Color(0xff5d3f3c),
+  onSecondaryContainer: Color(0xffffdad6),
+  tertiary: Color(0xffe0c38c),
+  onTertiary: Color(0xff3f2d04),
+  tertiaryContainer: Color(0xff584419),
+  onTertiaryContainer: Color(0xfffedea6),
+  error: Color(0xffffb4ab),
+  onError: Color(0xff690005),
+  errorContainer: Color(0xff93000a),
+  onErrorContainer: Color(0xffffb4ab),
+  background: Color(0xff1e1816),
+  onBackground: Color(0xffede0de),
+  surface: Color(0xff1e1816),
+  onSurface: Color(0xffede0de),
+  surfaceVariant: Color(0xff4f3e3c),
+  onSurfaceVariant: Color(0xffd8c2bf),
+  outline: Color(0xffa08c8a),
+  outlineVariant: Color(0xff534341),
+  shadow: Color(0xff000000),
+  scrim: Color(0xff000000),
+  inverseSurface: Color(0xfff6edec),
+  onInverseSurface: Color(0xff362f2e),
+  inversePrimary: Color(0xffb91d20),
+  surfaceTint: Color(0xffffb4ac),
+);
+const ColorScheme flexSchemeLight = ColorScheme(
+  brightness: Brightness.light,
+  primary: Color(0xffb91d20),
+  onPrimary: Color(0xffffffff),
+  primaryContainer: Color(0xffffdad6),
+  onPrimaryContainer: Color(0xff410003),
+  secondary: Color(0xff775653),
+  onSecondary: Color(0xffffffff),
+  secondaryContainer: Color(0xffffdad6),
+  onSecondaryContainer: Color(0xff2c1513),
+  tertiary: Color(0xff725b2e),
+  onTertiary: Color(0xffffffff),
+  tertiaryContainer: Color(0xfffedea6),
+  onTertiaryContainer: Color(0xff261900),
+  error: Color(0xffffb4ab),
+  onError: Color(0xff690005),
+  errorContainer: Color(0xff93000a),
+  onErrorContainer: Color(0xffffb4ab),
+  //error: Color(0xffba1a1a),
+  //onError: Color(0xffffffff),
+  //errorContainer: Color(0xffffdad6),
+  //onErrorContainer: Color(0xff410002),
+  background: Color(0xfffcf3f7),
+  onBackground: Color(0xff201a19),
+  surface: Color(0xfffcf3f7),
+  onSurface: Color(0xff201a19),
+  surfaceVariant: Color(0xfff2d6d4),
+  onSurfaceVariant: Color(0xff534341),
+  outline: Color(0xff857371),
+  outlineVariant: Color(0xffd8c2bf),
+  shadow: Color(0xff000000),
+  scrim: Color(0xff000000),
+  inverseSurface: Color(0xff3a2e2d),
+  onInverseSurface: Color(0xfffbeeec),
+  inversePrimary: Color(0xffffb4ac),
+  surfaceTint: Color(0xffb91d20),
+);

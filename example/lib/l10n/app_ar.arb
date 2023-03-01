@@ -1,0 +1,15 @@
+{
+    "@@locale": "ar",
+    "appName": "العنوان",
+    "home": "الاستقبال",
+    "profile": "الشخصي",
+    "discovery": "الاكتشاف",
+    "settings": "الاعدادات",
+    "welcome": "مرحبا {firstName}",
+    "@welcome": {
+        "description": "Welcome message on the Home screen",
+        "placeholders": {
+          "firstName": {}
+        }
+      }
+}

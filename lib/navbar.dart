@@ -33,34 +33,46 @@ class NavBar extends GetResponsiveView<OmniversalHomeController> {
 
             switch (pageindex) {
               case 0:
-                Get.toNamed('/');
+                //Get.toNamed('/');
+                GoRouter.of(context).pushNamed('/');
                 controller.update();
                 break;
               case 1:
-                Get.toNamed('/Settings');
+                //Get.toNamed('/Settings');
+                GoRouter.of(context).pushNamed('/discover');
                 controller.update();
                 break;
               case 2:
-                if (icon1 != null && label1 != null) {
+                GoRouter.of(context).pushNamed('/profile');
+                controller.update();
+                break;
+              /*if (icon1 != null && label1 != null) {
                   Get.toNamed(route1!);
                   controller.update();
-                }
-                break;
+                }*/
+
               case 3:
-                if (icon2 != null && label2 != null) {
+                /*if (icon2 != null && label2 != null) {
                   Get.toNamed(route2!);
                   controller.update();
                 }
+                break;*/
+                GoRouter.of(context).pushNamed('/settings');
+                controller.update();
                 break;
-              case 4:
-                if (icon3 != null && label3 != null) {
+              /* case 4:
+                GoRouter.of(context).pushNamed('/settings');
+                controller.update();
+                break;*/
+              /*if (icon3 != null && label3 != null) {
                   Get.toNamed(route3!);
                   controller.update();
                 }
-                break;
+                break;*/
             }
           },
           selectedIndex: controller.pageselected.value,
+          backgroundColor: Colors.transparent,
           destinations: [
             NavigationDestination(
               icon: const Icon(
@@ -73,13 +85,29 @@ class NavBar extends GetResponsiveView<OmniversalHomeController> {
             ),
             NavigationDestination(
                 icon: const Icon(
+                  Icons.discord,
+                ),
+                selectedIcon: const Icon(
+                  Icons.discord,
+                ),
+                label: 'discover'.tr),
+            NavigationDestination(
+                icon: const Icon(
+                  Icons.person,
+                ),
+                selectedIcon: const Icon(
+                  Icons.person,
+                ),
+                label: 'profile'.tr),
+            NavigationDestination(
+                icon: const Icon(
                   Icons.settings,
                 ),
                 selectedIcon: const Icon(
                   Icons.settings,
                 ),
                 label: 'settings'.tr),
-            if (icon1 != null && label1 != null)
+            /*if (icon1 != null && label1 != null)
               NavigationDestination(
                   icon: Icon(
                     icon1,
@@ -107,7 +135,7 @@ class NavBar extends GetResponsiveView<OmniversalHomeController> {
                   icon3,
                 ),
                 label: label3!,
-              ),
+              ),*/
           ]);
     } else {
       return const SizedBox();

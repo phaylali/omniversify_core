@@ -7,8 +7,6 @@ class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
   @override
   Widget build(BuildContext context) {
     return OmniversalSkeleton(
-      fullscreen: false,
-      //navrailx: null,
       function: () {
         Get.toNamed("/");
       },
@@ -20,7 +18,6 @@ class OmniversalError404 extends GetResponsiveView<OmniversalHomeController> {
         Icons.home,
         color: Theme.of(context).colorScheme.primary,
       ),
-      fabenabled: true,
       child: Center(
         child: SizedBox(
             width: 400,
